@@ -433,6 +433,9 @@ private:
         std::unique_ptr<Graph> newGraph;
         if (filename.find(".csv") != std::string::npos) {
             newGraph = GraphLoader::loadFromCSV(filename, false);
+        } else if (filename.find("kg.json") != std::string::npos || filename.find("knowledge") != std::string::npos) {
+            // Загрузка графа знаний
+            newGraph = GraphLoader::loadFromKnowledgeGraph(filename, true);
         } else if (filename.find(".json") != std::string::npos) {
             newGraph = GraphLoader::loadFromJSON(filename, false);
         } else {

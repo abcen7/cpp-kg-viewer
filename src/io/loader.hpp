@@ -14,6 +14,9 @@ public:
     // Загрузка из JSON формата
     static std::unique_ptr<Graph> loadFromJSON(const std::string& filename, bool directed = false);
     
+    // Загрузка из формата графа знаний (kg.json)
+    static std::unique_ptr<Graph> loadFromKnowledgeGraph(const std::string& filename, bool directed = true);
+    
     // Сохранение в CSV
     static bool saveToCSV(const Graph& g, const std::string& filename);
     

@@ -20,7 +20,7 @@ void Graph::addVertexInternal(int id, const std::string& label) {
     }
 }
 
-void Graph::addEdge(int from, int to, double weight) {
+void Graph::addEdge(int from, int to, double weight, const std::string& edgeLabel) {
     std::lock_guard<std::mutex> lock(mutex_);
     if (vertices_.find(from) == vertices_.end()) {
         addVertexInternal(from);
@@ -28,14 +28,14 @@ void Graph::addEdge(int from, int to, double weight) {
     if (vertices_.find(to) == vertices_.end()) {
         addVertexInternal(to);
     }
-    addEdgeInternal(from, to, weight);
+    addEdgeInternal(from, to, weight, edgeLabel);
     if (!directed_) {
-        addEdgeInternal(to, from, weight);
+        addEdgeInternal(to, from, weight, edgeLabel);
     }
 }
 
-void Graph::addEdgeInternal(int from, int to, double weight) {
-    Edge edge(from, to, weight, directed_);
+void Graph::addEdgeInternal(int from, int to, double weight, const std::string& edgeLabel) {
+    Edge edge(from, to, weight, directed_, edgeLabel);
     auto& edges = adjacency_list_[from];
     auto it = std::find_if(edges.begin(), edges.end(),
         [&](const Edge& e) { return e.to == to; });
@@ -43,6 +43,7 @@ void Graph::addEdgeInternal(int from, int to, double weight) {
         edges.push_back(edge);
     } else {
         it->weight = weight;
+        it->label = edgeLabel;
     }
 }
 

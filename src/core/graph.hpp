@@ -23,9 +23,10 @@ struct Edge {
     int to;
     double weight;
     bool directed;
+    std::string label;  // Тип связи (например, "lecturer_of", "subtopic_of")
     
-    Edge(int from, int to, double weight = 1.0, bool directed = false)
-        : from(from), to(to), weight(weight), directed(directed) {}
+    Edge(int from, int to, double weight = 1.0, bool directed = false, const std::string& label = "")
+        : from(from), to(to), weight(weight), directed(directed), label(label) {}
     
     bool operator==(const Edge& other) const {
         return from == other.from && to == other.to;
@@ -38,7 +39,7 @@ public:
     
     // Добавление вершин и рёбер
     void addVertex(int id, const std::string& label = "");
-    void addEdge(int from, int to, double weight = 1.0);
+    void addEdge(int from, int to, double weight = 1.0, const std::string& edgeLabel = "");
     void removeVertex(int id);
     void removeEdge(int from, int to);
     
@@ -74,7 +75,7 @@ private:
     std::unordered_map<int, std::vector<Edge>> adjacency_list_;
     mutable std::mutex mutex_;
     
-    void addEdgeInternal(int from, int to, double weight);
+    void addEdgeInternal(int from, int to, double weight, const std::string& edgeLabel = "");
     void addVertexInternal(int id, const std::string& label = "");  // Без блокировки
 };
 

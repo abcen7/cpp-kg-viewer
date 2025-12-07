@@ -1,0 +1,1378 @@
+{
+    "categories": [
+        "document",
+        "people",
+        "organizations",
+        "concepts",
+        "mathematics",
+        "conceptual"
+    ],
+    "knowledgeGraph": {
+        "entities": [
+            {
+                "attributes": {
+                    "lecture_date": "September 12",
+                    "lecture_number": {
+                        "$numberDouble": "6.0"
+                    },
+                    "lecturer": "Ryan Tibshirani",
+                    "mentioned_on_pages": [
+                        0
+                    ],
+                    "semester": "Fall 2013",
+                    "source": [
+                        {
+                            "pages": [
+                                0
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e1",
+                "name": "10-725: Optimization",
+                "type": "course"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ],
+                    "role": "Lecturer",
+                    "source": [
+                        {
+                            "pages": [
+                                0
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e2",
+                "name": "Ryan Tibshirani",
+                "type": "person"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ],
+                    "role": "Scribe",
+                    "source": [
+                        {
+                            "pages": [
+                                0
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e3",
+                "name": "Micol Marchetti-Bowick",
+                "type": "person"
+            },
+            {
+                "attributes": {
+                    "contribution": "LaTeX template",
+                    "mentioned_on_pages": [
+                        0
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                0
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e4",
+                "name": "UC Berkeley EECS dept.",
+                "type": "organization"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0,
+                        1,
+                        2
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                0,
+                                1,
+                                2
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ],
+                    "topic": "Optimization"
+                },
+                "id": "e5",
+                "name": "Gradient Descent",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                0
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ],
+                    "subtopic": "Gradient Descent"
+                },
+                "id": "e6",
+                "name": "Convergence Analysis",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "description": "Convergence of gradient descent with fixed step size",
+                    "mentioned_on_pages": [
+                        0
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                0
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e7",
+                "name": "Theorem 6.1",
+                "type": "theorem"
+            },
+            {
+                "attributes": {
+                    "codomain": "ℝ",
+                    "domain": "ℝ^n",
+                    "mentioned_on_pages": [
+                        0
+                    ],
+                    "properties": "convex and differentiable",
+                    "source": [
+                        {
+                            "pages": [
+                                0
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e8",
+                "name": "f",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "description": "Lipschitz continuity constant",
+                    "mentioned_on_pages": [
+                        0
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                0
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ],
+                    "value": "\u003e 0"
+                },
+                "id": "e9",
+                "name": "L",
+                "type": "constant"
+            },
+            {
+                "attributes": {
+                    "description": "step size",
+                    "mentioned_on_pages": [
+                        0,
+                        1
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                0,
+                                1
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e10",
+                "name": "t",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "description": "Lipschitz constant",
+                    "mentioned_on_pages": [
+                        1
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                1
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e11",
+                "name": "L",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "description": "objective function",
+                    "mentioned_on_pages": [
+                        1,
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                1,
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e12",
+                "name": "f(x)",
+                "type": "function"
+            },
+            {
+                "attributes": {
+                    "description": "input variable",
+                    "mentioned_on_pages": [
+                        1,
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                1,
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e13",
+                "name": "x",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "description": "optimal solution",
+                    "mentioned_on_pages": [
+                        1
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                1
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e14",
+                "name": "x*",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "description": "next iteration",
+                    "mentioned_on_pages": [
+                        1
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                1
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e15",
+                "name": "x+",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                1
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e16",
+                "name": "Convexity",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                1
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e17",
+                "name": "Convergence",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "description": "gradient of f(x)",
+                    "mentioned_on_pages": [
+                        1
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                1
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e18",
+                "name": "∇f(x)",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "description": "number of iterations",
+                    "mentioned_on_pages": [
+                        1
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                1
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e19",
+                "name": "k",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                2
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e20",
+                "name": "Convergence Rate",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2,
+                        3
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                2,
+                                3
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e21",
+                "name": "Convex Function",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                2
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e22",
+                "name": "Lipschitz Continuous",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                2
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e23",
+                "name": "Backtracking Line Search",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                2
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e24",
+                "name": "Subgradients",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                2
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e25",
+                "name": "Strongly Convex Function",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                2
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e26",
+                "name": "Theorem 6.2",
+                "type": "theorem"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3,
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                3,
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e27",
+                "name": "subgradient",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                3
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e28",
+                "name": "differentiable function",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "function": "f(x) = |x|",
+                    "mentioned_on_pages": [
+                        3
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                3
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e29",
+                "name": "absolute value function",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                3
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e30",
+                "name": "subdifferential",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                3
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e31",
+                "name": "convex geometry",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "function": "±_C(x) = ±{x ∈ C}",
+                    "mentioned_on_pages": [
+                        3,
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                3,
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e32",
+                "name": "indicator function",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                3
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e33",
+                "name": "norm",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "function": "||x||_2",
+                    "mentioned_on_pages": [
+                        3
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                3
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e34",
+                "name": "l2 norm",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "function": "||x||_1",
+                    "mentioned_on_pages": [
+                        3
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                3
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e35",
+                "name": "l1 norm",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e36",
+                "name": "Normal cone",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e37",
+                "name": "Optimization problem",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e38",
+                "name": "Subgradient calculus",
+                "type": "concept"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e39",
+                "name": "g(x)",
+                "type": "function"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e40",
+                "name": "f_1(x)",
+                "type": "function"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e41",
+                "name": "f_2(x)",
+                "type": "function"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e42",
+                "name": "f_s(x)",
+                "type": "function"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e43",
+                "name": "x^*",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e44",
+                "name": "y",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e45",
+                "name": "g",
+                "type": "variable"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ],
+                    "value": "a \u003e 0"
+                },
+                "id": "e46",
+                "name": "a",
+                "type": "constant"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ],
+                    "source": [
+                        {
+                            "pages": [
+                                4
+                            ],
+                            "source": "uploaded_pdf"
+                        }
+                    ]
+                },
+                "id": "e47",
+                "name": "b",
+                "type": "constant"
+            }
+        ],
+        "relationships": [
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ]
+                },
+                "source": "e1",
+                "target": "e2",
+                "type": "lecturer_of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ]
+                },
+                "source": "e1",
+                "target": "e3",
+                "type": "scribe_of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ]
+                },
+                "source": "e1",
+                "target": "e4",
+                "type": "provided_template_by"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ]
+                },
+                "source": "e5",
+                "target": "e6",
+                "type": "subtopic_of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ]
+                },
+                "source": "e7",
+                "target": "e5",
+                "type": "theorem_about"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ]
+                },
+                "source": "e7",
+                "target": "e8",
+                "type": "theorem_about"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ]
+                },
+                "source": "e7",
+                "target": "e9",
+                "type": "theorem_about"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        0
+                    ]
+                },
+                "source": "e7",
+                "target": "e10",
+                "type": "theorem_about"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ]
+                },
+                "source": "e5",
+                "target": "e17",
+                "type": "implements"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ]
+                },
+                "source": "e10",
+                "target": "e5",
+                "type": "parameter_of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ]
+                },
+                "source": "e11",
+                "target": "e12",
+                "type": "property_of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ]
+                },
+                "source": "e12",
+                "target": "e13",
+                "type": "takes"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ]
+                },
+                "source": "e13",
+                "target": "e14",
+                "type": "approaches"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ]
+                },
+                "source": "e14",
+                "target": "e17",
+                "type": "result_of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ]
+                },
+                "source": "e15",
+                "target": "e13",
+                "type": "successor_of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ]
+                },
+                "source": "e16",
+                "target": "e12",
+                "type": "property_of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ]
+                },
+                "source": "e18",
+                "target": "e12",
+                "type": "derivative_of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        1
+                    ]
+                },
+                "source": "e19",
+                "target": "e5",
+                "type": "parameter_of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ]
+                },
+                "source": "e5",
+                "target": "e21",
+                "type": "applies to"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ]
+                },
+                "source": "e5",
+                "target": "e20",
+                "type": "has property"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ]
+                },
+                "source": "e21",
+                "target": "e22",
+                "type": "is"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ]
+                },
+                "source": "e5",
+                "target": "e23",
+                "type": "uses"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ]
+                },
+                "source": "e24",
+                "target": "e21",
+                "type": "related to"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ]
+                },
+                "source": "e25",
+                "target": "e21",
+                "type": "is a type of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ]
+                },
+                "source": "e26",
+                "target": "e5",
+                "type": "describes"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        2
+                    ]
+                },
+                "source": "e20",
+                "target": "e25",
+                "type": "has specific case"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ]
+                },
+                "source": "e27",
+                "target": "e21",
+                "type": "part of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ]
+                },
+                "source": "e21",
+                "target": "e28",
+                "type": "is a"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ]
+                },
+                "source": "e29",
+                "target": "e27",
+                "type": "example of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ]
+                },
+                "source": "e30",
+                "target": "e27",
+                "type": "set of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ]
+                },
+                "source": "e31",
+                "target": "e21",
+                "type": "related to"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ]
+                },
+                "source": "e32",
+                "target": "e21",
+                "type": "defined on"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ]
+                },
+                "source": "e33",
+                "target": "e34",
+                "type": "has type"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        3
+                    ]
+                },
+                "source": "e33",
+                "target": "e35",
+                "type": "has type"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e27",
+                "target": "e38",
+                "type": "is part of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e32",
+                "target": "e27",
+                "type": "related to"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e36",
+                "target": "e32",
+                "type": "definition"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e37",
+                "target": "e12",
+                "type": "involves"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e12",
+                "target": "e13",
+                "type": "function of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e39",
+                "target": "e46",
+                "type": "function of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e39",
+                "target": "e47",
+                "type": "function of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e40",
+                "target": "e38",
+                "type": "part of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e41",
+                "target": "e38",
+                "type": "part of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e42",
+                "target": "e38",
+                "type": "part of"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e43",
+                "target": "e13",
+                "type": "minimizes"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e45",
+                "target": "e13",
+                "type": "related to"
+            },
+            {
+                "attributes": {
+                    "mentioned_on_pages": [
+                        4
+                    ]
+                },
+                "source": "e46",
+                "target": "e12",
+                "type": "scales"
+            }
+        ]
+    }
+}

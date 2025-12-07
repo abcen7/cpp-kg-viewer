@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include <memory>
 #include <string>
+#include <optional>
 
 namespace graph {
 
@@ -38,6 +39,10 @@ private:
     float zoom_ = 1.0f;
     sf::Vector2f panOffset_{0.0f, 0.0f};
     
+    // Шрифт для текста
+    std::optional<sf::Font> font_;
+    bool fontLoaded_ = false;
+    
     // Цвета
     sf::Color vertexColor_ = sf::Color::White;
     sf::Color edgeColor_ = sf::Color(100, 100, 100);
@@ -48,6 +53,8 @@ private:
     void drawEdge(const Graph& g, int from, int to, const sf::Color& color, sf::RenderTarget& target);
     void drawVertex(const Graph& g, int id, const sf::Color& color, sf::RenderTarget& target);
     void drawLabel(const Graph& g, int id, sf::RenderTarget& target);
+    void drawEdgeLabel(const Graph& g, int from, int to, const std::string& label, sf::RenderTarget& target);
+    void loadFont();
 };
 
 } // namespace graph

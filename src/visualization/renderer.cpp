@@ -2,12 +2,49 @@
 #include <cmath>
 #include <algorithm>
 #include <iostream>
+#include <filesystem>
 
 namespace graph {
 
 GraphRenderer::GraphRenderer(sf::RenderWindow& window) 
     : window_(window) {
     view_ = sf::View(sf::FloatRect({0, 0}, {static_cast<float>(window_.getSize().x), static_cast<float>(window_.getSize().y)}));
+    
+    // Попытаться загрузить системный шрифт
+    loadFont();
+}
+
+void GraphRenderer::loadFont() {
+    // Попробовать загрузить шрифт из стандартных системных путей
+    std::vector<std::string> fontPaths = {
+        // macOS системные шрифты (приоритет .ttf файлам)
+        "/System/Library/Fonts/Geneva.ttf",
+        "/System/Library/Fonts/SFNSMono.ttf",
+        "/System/Library/Fonts/Supplemental/Arial.ttf",
+        "/System/Library/Fonts/Supplemental/Courier New.ttf",
+        "/Library/Fonts/Arial.ttf",
+        "/System/Library/Fonts/Helvetica.ttc",  // Попробуем и .ttc
+        // Linux системные шрифты
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+        // Windows системные шрифты (если нужно)
+        "C:/Windows/Fonts/arial.ttf",
+    };
+    
+    for (const auto& path : fontPaths) {
+        if (std::filesystem::exists(path)) {
+            font_.emplace();
+            if (font_->openFromFile(path)) {
+                fontLoaded_ = true;
+                std::cout << "Шрифт загружен из: " << path << std::endl;
+                return;
+            }
+        }
+    }
+    
+    // Если не удалось загрузить, попробуем использовать встроенный механизм SFML
+    // В SFML 3 можно попробовать использовать системный шрифт через другую функцию
+    std::cout << "Предупреждение: не удалось загрузить шрифт, текст на рёбрах не будет отображаться" << std::endl;
 }
 
 void GraphRenderer::render(const Graph& g, const AlgorithmState& state, sf::RenderTarget& target) {
@@ -79,6 +116,9 @@ void GraphRenderer::drawEdge(const Graph& g, int from, int to, const sf::Color& 
     const Vertex* v2 = g.getVertex(to);
     if (!v1 || !v2) return;
     
+    // Получить ребро для извлечения метки
+    Edge edge = g.getEdge(from, to);
+    
     sf::VertexArray lineArray(sf::PrimitiveType::Lines, 2);
     lineArray[0].position = sf::Vector2f(static_cast<float>(v1->x), static_cast<float>(v1->y));
     lineArray[0].color = color;
@@ -86,6 +126,59 @@ void GraphRenderer::drawEdge(const Graph& g, int from, int to, const sf::Color& 
     lineArray[1].color = color;
     
     target.draw(lineArray);
+    
+    // Отрисовать метку ребра, если она есть
+    if (!edge.label.empty()) {
+        drawEdgeLabel(g, from, to, edge.label, target);
+    }
+}
+
+void GraphRenderer::drawEdgeLabel(const Graph& g, int from, int to, const std::string& label, sf::RenderTarget& target) {
+    const Vertex* v1 = g.getVertex(from);
+    const Vertex* v2 = g.getVertex(to);
+    if (!v1 || !v2 || label.empty()) return;
+    
+    // Вычислить середину ребра
+    float midX = (static_cast<float>(v1->x) + static_cast<float>(v2->x)) / 2.0f;
+    float midY = (static_cast<float>(v1->y) + static_cast<float>(v2->y)) / 2.0f;
+    
+    // Создать текст, если шрифт загружен
+    if (fontLoaded_ && font_.has_value()) {
+        sf::Text text(*font_, label, 10);  // SFML 3 требует шрифт в конструкторе
+        text.setFillColor(sf::Color::Black);
+        
+        // Центрировать текст
+        sf::FloatRect textBounds = text.getLocalBounds();
+        sf::Vector2f textSize = textBounds.size;  // SFML 3: size - публичное поле
+        text.setPosition({midX - textSize.x / 2.0f, midY - textSize.y / 2.0f - 2.0f});
+        
+        // Создать фон для текста
+        float padding = 4.0f;
+        float labelWidth = textSize.x + padding * 2.0f;
+        float labelHeight = textSize.y + padding * 2.0f;
+        
+        sf::RectangleShape background(sf::Vector2f(labelWidth, labelHeight));
+        background.setPosition({midX - labelWidth / 2.0f, midY - labelHeight / 2.0f});
+        background.setFillColor(sf::Color(255, 255, 255, 220));  // Полупрозрачный белый
+        background.setOutlineColor(sf::Color(100, 100, 100));
+        background.setOutlineThickness(1.0f);
+        
+        // Отрисовать фон и текст
+        target.draw(background);
+        target.draw(text);
+    } else {
+        // Если шрифт не загружен, отрисовываем только фон с примерной шириной
+        float labelWidth = label.length() * 6.0f;
+        float labelHeight = 14.0f;
+        
+        sf::RectangleShape background(sf::Vector2f(labelWidth, labelHeight));
+        background.setPosition({midX - labelWidth / 2.0f, midY - labelHeight / 2.0f});
+        background.setFillColor(sf::Color(255, 255, 255, 200));
+        background.setOutlineColor(sf::Color::Black);
+        background.setOutlineThickness(1.0f);
+        
+        target.draw(background);
+    }
 }
 
 void GraphRenderer::drawVertex(const Graph& g, int id, const sf::Color& color, sf::RenderTarget& target) {
